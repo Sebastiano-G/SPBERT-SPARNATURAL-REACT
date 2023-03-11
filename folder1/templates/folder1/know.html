@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://knowwwledgeportal.altervista.org/css/styles.css" rel="stylesheet" />
+        <title>KNOWWWLEDGE PORTAL</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="DC:Title" content="The Knowwwledge Portal"/>
+    	<meta name="DC.Subject" content="Web 3.0, Digital Ethics, Code"/>
+	    <meta name="description" content="This is a knowledge portal: a website entirely devoted to sciences, tutorial, projects, semantic web (3.0), and digital environments"/>
+        <meta name="DC.Publisher" content="altervista.org"/>
+        <meta name="DC.Date" content="19/04/2022"/>
+        <meta name="DC.Identifier" content="www.knowwwledgeportal.altervista.org"/>
+        <meta name="DC.Language" content="English"/>
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://knowwwledgeportal.altervista.org">THE KNOWWWLEDGE PORTAL
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="https://knowwwledgeportal.altervista.org/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://knowwwledgeportal.altervista.org/sciences.html">Sciences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://knowwwledgeportal.altervista.org/projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://knowwwledgeportal.altervista.org/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Welcome to the KNOWWWLEDGE PORTAL!</h1>
+                    <p class="lead mb-0">Enjoy the Knowledge!</p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <a href="#"><img class="card-img-top" src="images/rdf.jpeg" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">April 16, 2022</div>
+                            <h2 class="card-title">What is RDF?</h2>
+                            <p class="card-text">RDF (Resoruce Description Framework) is a standard model for data interchange on the Web. [...]</p>
+                            <a class="btn btn-primary" href="sciences/semantic-web/RDF.html">Read more →</a>
+                        </div>
+                    </div>
+                    <!-- Nested row for non-featured blog posts-->
+                                        <!-- Nested row for non-featured blog posts-->
+                    <div class="row" id="row1">
+                        <div class="col-lg-6">
+                            <!-- Blog post1-->
+                            {% for img in imgs %}
+                            <div class="card mb-4">
+                                <a href="projects/examples/ajax.html"><img class="card-img-top" src="{{ img.img.url }}" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">May 17, 2022</div>
+                                    <h2 class="card-title h4">{{ img.nome }}</h2>
+                                    <p class="card-text">The acronym AJAX stands for Asynchronous JavaScript and XML. What does it mean? [...]</p>
+                                    <a class="btn btn-primary" href="projects/examples/ajax.html">Read more →</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Blog post2-->
+                            <div class="card mb-4">
+                                <a href="projects/tutorials/HTML_forms.html"><img class="card-img-top" src="images/forms.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">April 30, 2022</div>
+                                    <h2 class="card-title h4">HTML Forms</h2>
+                                    <p class="card-text">Forms are used to enter some values that are then processed by a server-side application [...]</p>
+                                    <a class="btn btn-primary" href="projects/tutorials/HTML_forms.html">Read more →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post4-->
+                            <div class="card mb-4">
+                                <a href="projects/tutorials/turtle.html"><img class="card-img-top" src="images/turtle-tut.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">April 25, 2022</div>
+                                    <h2 class="card-title h4">Turtle Tutorial</h2>
+                                    <p class="card-text">Turtle is a textual syntax for expressing RDF data in a SPARQL-compatible format [...]</p>
+                                    <a class="btn btn-primary" href="projects/tutorials/turtle.html">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="row2" style="display:none;">
+                        <div class="col-lg-6">
+                            <!-- Blog post5-->
+                            <div class="card mb-4">
+                                <a href="projects/tutorials/SPARQL-select-how-to.html"><img class="card-img-top" src="images/SPARQL.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">April 23, 2022</div>
+                                    <h2 class="card-title h4">SPARQL Select - How to (Part 1)</h2>
+                                    <p class="card-text">SPARQL language allows the expression of four different types of queries on RDF data [...]</p>
+                                    <a class="btn btn-primary" href="projects/tutorials/SPARQL-select-how-to.html">Read more →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post7-->
+                            <div class="card mb-4">
+                                <a href="sciences/semantic-web/SPARQL.html"><img class="card-img-top" src="images/SPARQL.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">April 17, 2022</div>
+                                    <h2 class="card-title h4">What is SPARQL?</h2>
+                                    <p class="card-text">SPARQL (SPARQL Protocol and RDF Query Language) is an RDF query language [...]</p>
+                                    <a class="btn btn-primary" href="sciences/semantic-web/SPARQL.html">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Blog post6-->
+                            <div class="card mb-4">
+                                <a href="sciences/semantic-web/turtle.html"><img class="card-img-top" src="images/turtle-tut.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">April 21, 2022</div>
+                                    <h2 class="card-title h4">Turtle Syntax</h2>
+                                    <p class="card-text">Turtle is a textual syntax for expressing RDF data in a SPARQL-compatible format [...]</p>
+                                    <a class="btn btn-primary" href="sciences/semantic-web/turtle.html">Read more →</a>
+                                </div>
+                            </div>
+                            <!-- Blog post8-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="images/rdf-schema.png" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">April 16, 2022</div>
+                                    <h2 class="card-title h4">What is RDF Schema?</h2>
+                                    <p class="card-text">RDF Schema is an extension of RDF basic vocabulary [...]</p>
+                                    <a class="btn btn-primary" href="sciences/semantic-web/RDF-Schema.html">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination-->
+                    <nav aria-label="Pagination">
+                        <hr class="my-0" />
+                        <ul class="pagination justify-content-center my-4">
+                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+                            <li class="page-item active" id="link1" aria-current="page" type="button" onclick="document.getElementById('row2').style.display='none'; document.getElementById('row1').style.display=''; document.getElementById('link1').classList.add('active'); document.getElementById('link2').classList.remove('active')"><a class="page-link" href="#!">1</a></li>
+                            <li class="page-item" id="link2" type="button" onclick="document.getElementById('row2').style.display=''; document.getElementById('row1').style.display='none'; document.getElementById('link2').classList.add('active'); document.getElementById('link1').classList.remove('active')"><a class="page-link" href="#!">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Insert a Keyword..." aria-label="Enter search term..." aria-describedby="button-search">
+                                <ul id="myUL">
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/sciences/semantic-web/RDF.html">What is RDF?</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/sciences/semantic-web/RDF-Schema.html">What is RDF Schema?</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/sciences/semantic-web/SPARQL.html">What is SPARQL?</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/projects/examples/ajax.html">Learn AJAX by Examples</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/projects/tutorials/HTML_forms.html">HTML Forms</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/projects/tutorials/XQuery.html">XQuery Tutorial</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/projects/tutorials/turtle.html">Turtle Tutorial</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/projects/tutorials/SPARQL-select-how-to.html">SPARQL Select - How to (Part 1)</a></li>
+                                  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/projects/tutorials/SPARQL-select-how-to-2.html">SPARQL Select - How to (Part 2)</a></li>
+								  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/sciences/semantic-web/turtle.html">Turtle Syntax</a></li>
+								  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/sciences/programming-languages/pandas-py.html">Introduction to pandas</a></li>
+								  <li style="display:none"><a href="https://knowwwledgeportal.altervista.org/projects/examples/HTTP-methods-GET-and-POST.html?">HTTP methods: GET and POST</a></li>                                
+                                </ul>
+							<script>
+                            	function myFunction() {
+                                  var input, filter, ul, li, a, i, txtValue;
+                                  input = document.getElementById("myInput");
+                                  filter = input.value.toUpperCase();
+                                  ul = document.getElementById("myUL");
+                                  li = ul.getElementsByTagName("li");
+                                  if (filter.length == 0) {
+                                    ul.style.display = "none";
+                                  } else {
+                                    ul.style.display = '';
+                                    for (i = 0; i < li.length; i++) {
+                                      a = li[i].getElementsByTagName("a")[0];
+                                      txtValue = a.textContent || a.innerText;
+                                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                        li[i].style.display = "";
+                                      } else {
+                                        li[i].style.display = "none";
+                                      }
+                                    }
+                                  }
+                                }
+							</script>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a class="badge bg-secondary text-decoration-none link-light" href="projects/learn-by-examples.html">Learn by examples</a></li>
+                                        <li><a class="badge bg-secondary text-decoration-none link-light" href="sciences/programming-languages.html">Programming languages</a></li>
+                                        <li><a class="badge bg-secondary text-decoration-none link-light" href="projects/reviews.html">Reviews</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a class="badge bg-secondary text-decoration-none link-light" href="sciences/semantic-web.html">Semantic Web</a></li>
+                                        <li><a class="badge bg-secondary text-decoration-none link-light" href="projects/tutorials.html">Tutorials</a></li>
+                                        <li><a class="badge bg-secondary text-decoration-none link-light" href="projects/digital-ethics.html">Digital Ethics</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Ad.</div>
+                        <div class="card-body"><script>!function(d,l,e,s,c){e=d.createElement("script");e.src="//ad.altervista.org/js.ad/size=300X250/?ref="+encodeURIComponent(l.hostname+l.pathname)+"&r="+Date.now();s=d.scripts;c=d.currentScript||s[s.length-1];c.parentNode.insertBefore(e,c)}(document,location)</script>
+						</div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">Social media</div>
+                        <div class="card-body"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fknowwwledgeportal.altervista.org&layout=button&size=large&width=100&height=28&appId" width="100" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; The KNOWWWLEDGE PORTAL 2022</p>
+            <p class="m-0 text-center"><a class="text-white" href="https://www.iubenda.com/privacy-policy/52894893" rel="noreferrer nofollow" target="_blank">Privacy Policy </a></p>
+            <p class="m-0 text-center"><a class="text-white" href="#" role="button" class="iubenda-advertising-preferences-link"> Personalizza tracciamento pubblicitario</a></p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

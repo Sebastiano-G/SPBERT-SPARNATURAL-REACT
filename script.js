@@ -11,6 +11,9 @@ function executeIfFileExist(src, callback) {
               console.log("male");
             }
         }
+        else {
+            console.log("doppiamente male");
+        }
     }
     xhr.open('HEAD', src)
 }

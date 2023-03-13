@@ -7,6 +7,9 @@ function executeIfFileExist(src, callback) {
               // The request has been completed successfully
               console.log(this.responseText);
             }
+            else {
+              console.log("male");
+            }
         }
     }
     xhr.open('HEAD', src)
